@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         adActiveEventListener = new AdActiveEventListener() {
             @Override
             public void OnPOIClickedHandler(int[] ints, int i) {
+                map.unLightAll();
+                map.highLightPlace(i, "#e57d22");
+                map.centerOnPlace(i);
+
             }
             @Override
             public void OnBuildingClickedHandler(int i) {
